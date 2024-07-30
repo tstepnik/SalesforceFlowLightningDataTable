@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <description>Flow Lightning Table</description>
+    <isExposed>true</isExposed>
+    <masterLabel>Flow Lightning Table</masterLabel>
+
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <propertyType name="T" extends="SObject" label="Input Type" description="Generic sObject data type used for input sObject properties" />
+            <property name="listOfSObjects" type="{T[]}" label="List of SObjects"/>
+            <property name="serialisedRecordsString" type="String" label="Serialized string" description="A JSON string representing a list of objects"/>
+            <property name="serialisedRecordsList" type="String[]" label="Serialized list" description="A list of json records representing objects"/>
+            <property name="columnsAsString" type="String" label="Columns" description="Columns of the table as Single String"/>
+            <property name="header" type="String" description="Header of the table"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>
